@@ -13,3 +13,6 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "bundle/vim-hdevtools"]
+	path = bundle/vim-hdevtools
+	url = https://github.com/bitc/vim-hdevtools.git

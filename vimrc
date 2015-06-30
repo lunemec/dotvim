@@ -31,6 +31,7 @@ if has("autocmd")
     autocmd FileType html setlocal ts=4 sts=4 sw=4 noexpandtab
     autocmd FileType css setlocal ts=4 sts=4 sw=4 noexpandtab
     autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
+    autocmd FileType haskell setlocal ts=8 sts=4 sw=4 shiftround expandtab
 
     " set unknown extensions to filetype
     autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml
@@ -38,6 +39,10 @@ if has("autocmd")
 
     " if file is .vimrc re-load vimrc
     autocmd! BufWritePost .vimrc source $MYVIMRC
+
+    " create haskell filebindings
+    autocmd FileType haskell nnoremap <buffer> <F2> :HdevtoolsType<CR>
+    autocmd FileType haskell nnoremap <buffer> <silent> <F3> :HdevtoolsClear<CR>
 endif
 
 " disable backwards compatible Vi mode.
@@ -147,5 +152,5 @@ noremap <silent> <C-k> <c-w>k
 noremap <silent> <C-j> <c-w>j
 
 " autorun nerdtree
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '\.hi', '\.o']
 autocmd VimEnter * NERDTree
