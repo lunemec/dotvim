@@ -109,7 +109,7 @@ set laststatus=2
 let g:Powerline_symbols = 'unicode'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = "murmur"
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 " clipboard on F7
 set clipboard=unnamedplus
@@ -151,6 +151,12 @@ noremap <silent> <C-h> <c-w>h
 noremap <silent> <C-k> <c-w>k
 noremap <silent> <C-j> <c-w>j
 
-" autorun nerdtree
-let NERDTreeIgnore = ['\.pyc$', '\.hi', '\.o']
-autocmd VimEnter * NERDTree
+if has("autocmd")
+    " autorun nerdtree
+    let NERDTreeIgnore = ['\.pyc$', '\.hi', '\.o']
+    autocmd VimEnter * NERDTree
+
+    " start tlist
+    let Tlist_Use_Right_Window = 1
+    autocmd VimEnter * TlistOpen
+endif
