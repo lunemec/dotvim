@@ -23,6 +23,11 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" set default encoding
+set enc=utf-8
+set fileencoding=utf-8
+set viminfo='100,h
+
 " set spaces and tabs depending on filetype
 if has("autocmd")
     autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
@@ -60,8 +65,8 @@ set mouse=a
 set ttymouse=xterm2
 
 " history
-set history=1000
-set undolevels=1000
+set history=10000
+set undolevels=10000
 
 " highlight tabs
 set listchars=tab:▸\ ,nbsp:_,trail:.,eol:¬
@@ -98,33 +103,12 @@ let g:pymode_rope_completion_bind = '<C-Space>'
 let g:easytags_always_enabled = 1
 let g:easytags_async = 1
 
-set enc=utf-8
-set fileencoding=utf-8
-set viminfo='100,h
-
-" ctrlP
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*.pyc,*.pyo
-let g:ctrlp_max_depth = 6
-
 " vim-airline
 set laststatus=2
 let g:Powerline_symbols = 'unicode'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = "murmur"
 let g:airline_powerline_fonts = 1
-
-" clipboard on F7
-set clipboard=unnamedplus
-
-"copy
-vmap <F7> "+ygv"*y`>
-""paste (Shift-F7 to paste after normal cursor, Ctrl-F7 to paste over visual selection)
-nmap <F7> "*gP
-nmap <S-F7> "*gp
-imap <F7> <C-r><C-o>*
-vmap <C-F7> "*p`]
-cmap <F7> <C-r><C-o>*
 
 " Python specific binding - ctrl+w: goto next word separated by _
 " this_is_sentence. ctrl+b: go back one _.
