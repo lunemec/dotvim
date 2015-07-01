@@ -95,6 +95,9 @@ let g:pymode_rope_completion = 0
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_completion_bind = '<C-Space>'
 
+let g:easytags_always_enabled = 1
+let g:easytags_async = 1
+
 set enc=utf-8
 set fileencoding=utf-8
 set viminfo='100,h
