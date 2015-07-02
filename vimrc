@@ -84,6 +84,16 @@ set backspace=indent,eol,start
 " quicker actions
 set timeoutlen=500
 
+" clipboard on F7
+set clipboard=unnamedplus
+" copy
+vmap <F7> "+ygv"*y`>
+" paste (Shift-F7 to paste after normal cursor, Ctrl-F7 to paste over visual
+" selection)
+nmap <F7> "*gP
+imap <F7> <C-r><C-o>*
+cmap <F7> <C-r><C-o>*
+
 " pymode specific options
 let g:pymode = 1
 let g:pymode_trim_whitespaces = 1
