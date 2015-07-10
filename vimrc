@@ -110,15 +110,15 @@ let g:pymode_rope_completion = 0
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_completion_bind = '<C-Space>'
 
-let g:easytags_always_enabled = 1
-let g:easytags_async = 1
-
 " vim-airline
 set laststatus=2
 let g:Powerline_symbols = 'unicode'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = "murmur"
 let g:airline_powerline_fonts = 1
+
+" D mode
+let g:dutyl_stdImportPaths=['/usr/include/dlang/dmd']
 
 " Python specific binding - ctrl+w: goto next word separated by _
 " this_is_sentence. ctrl+b: go back one _.
@@ -152,8 +152,4 @@ if has("autocmd")
     " autorun nerdtree
     let NERDTreeIgnore = ['\.pyc$', '\.hi', '\.o']
     autocmd VimEnter * NERDTree
-
-    " start tlist
-    let Tlist_Use_Right_Window = 1
-    autocmd VimEnter * TlistOpen
 endif

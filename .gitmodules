@@ -25,3 +25,6 @@
 [submodule "bundle/vim-unimpaired"]
 	path = bundle/vim-unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/vim-dutyl"]
+	path = bundle/vim-dutyl
+	url = git@github.com:idanarye/vim-dutyl.git
