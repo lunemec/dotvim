@@ -48,6 +48,8 @@ if has("autocmd")
     " create haskell filebindings
     autocmd FileType haskell nnoremap <buffer> <F2> :HdevtoolsType<CR>
     autocmd FileType haskell nnoremap <buffer> <silent> <F3> :HdevtoolsClear<CR>
+
+    autocmd FileType d :autocmd! BufWritePost *.d :DUlsyntaxCheck<CR>
 endif
 
 " disable backwards compatible Vi mode.
