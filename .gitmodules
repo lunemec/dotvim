@@ -25,3 +25,9 @@
 [submodule "bundle/vim-dutyl"]
 	path = bundle/vim-dutyl
 	url = git@github.com:idanarye/vim-dutyl.git
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+	url = git@github.com:davidhalter/jedi-vim.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git@github.com:ervandew/supertab.git

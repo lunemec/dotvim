@@ -42,6 +42,9 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml
     autocmd BufNewFile,BufRead *.jsx setfiletype javascript
 
+    " jedi-vim disable documentation on autocomplete
+    autocmd FileType python setlocal completeopt-=preview
+
     " if file is .vimrc re-load vimrc
     autocmd! BufWritePost .vimrc source $MYVIMRC
 
@@ -104,13 +107,19 @@ let g:pymode_folding = 0
 let g:pymode_lint_unmodified = 1
 let g:pymode_lint_ignore = "E501"
 let g:pymode_lint_on_fly = 0
+let g:pymode_virtualenv = 1
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
 " rope settings
 let g:pymode_rope = 0
 let g:pymode_rope_lookup_project = 0
 let g:pymode_rope_regenerate_on_write = 0
 let g:pymode_rope_completion = 0
 let g:pymode_rope_complete_on_dot = 0
-let g:pymode_rope_completion_bind = '<C-Space>'
+
+" jedi-vim
+let g:jedi#show_call_signatures = "0"
+let g:jedi#usages_command = "<leader>N"
 
 " vim-airline
 set laststatus=2
